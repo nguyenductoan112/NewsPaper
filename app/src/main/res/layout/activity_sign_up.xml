@@ -54,6 +54,17 @@
                 android:drawableLeft="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/signup_confirmpassword"
+                android:background="@drawable/custom_edittext"
+                android:layout_marginTop="40dp"
+                android:padding="8dp"
+                android:hint="Confirm Password"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:textColor="@color/black"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -67,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/logninRedirectText"
-            android:text="Already an user? lognin"
+            android:text="Already an user? Log In"
             android:layout_gravity="center"
             android:padding="8dp"
             android:layout_marginTop="10dp"

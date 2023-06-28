@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SignUp extends AppCompatActivity {
 
     private FirebaseAuth auth;
-    private EditText signupEmail, signupPassword;
+    private EditText signupEmail, signupPassword, signupConfirm;
     private Button signupButton;
     private TextView loginReairectText;
 
@@ -32,6 +32,7 @@ public class SignUp extends AppCompatActivity {
         signupEmail = findViewById(R.id.signup_email);
         signupPassword= findViewById(R.id.signup_password);
         signupButton=findViewById(R.id.signup_button);
+        signupConfirm = findViewById(R.id.signup_confirmpassword);
         loginReairectText=findViewById(R.id.logninRedirectText);
 
         signupButton.setOnClickListener(new View.OnClickListener() {
@@ -39,25 +40,31 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View view) {
                 String user = signupEmail.getText().toString().trim();
                 String pass = signupPassword.getText().toString().trim();
+                String confirmPass = signupConfirm.getText().toString().trim();
 
-                if(user.isEmpty()){
+                if (user.isEmpty()) {
                     signupEmail.setError("Email cannot be empty");
-                }
-                if(pass.isEmpty()){
+                } else if (pass.isEmpty()) {
                     signupPassword.setError("Password cannot be empty");
-                }else{
-                    auth.createUserWithEmailAndPassword(user,pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                } else if (confirmPass.isEmpty()) {
+                    signupConfirm.setError("ConfirmPassword cannot be empty");
+                } else if (!confirmPass.equals(pass)) {
+                    signupConfirm.setError("password incorrect");
+                } else {
+                    auth.createUserWithEmailAndPassword(user, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(task.isSuccessful()) {
-                                Toast.makeText(SignUp.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
+                            if (task.isSuccessful()) {
+                                Toast.makeText(SignUp.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(SignUp.this, Login.class));
                             } else {
-                                Toast.makeText(SignUp.this, "SignUp Failed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUp.this, "Sign Up failed " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
                 }
+
+
             }
         });
         loginReairectText.setOnClickListener(new View.OnClickListener() {
