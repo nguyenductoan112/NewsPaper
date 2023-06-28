@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "272140311867",
+    "firebase_url": "https://newspaper-2bc2c-default-rtdb.firebaseio.com",
+    "project_id": "newspaper-2bc2c",
+    "storage_bucket": "newspaper-2bc2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272140311867:android:97e9a0c4615558013a6b1e",
+        "android_client_info": {
+          "package_name": "com.example.newspaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272140311867-nm09p6lbjst6467p1gek1hbe0qjqmheg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj2_Vpow8RobXmNzq_tcIxrAFP_3lqhN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272140311867-nm09p6lbjst6467p1gek1hbe0qjqmheg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
