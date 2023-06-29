@@ -39,37 +39,42 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 String email = loginEmail.getText().toString();
                 String pass = loginPassword.getText().toString();
-                if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                    if (!pass.isEmpty()) {
-                        auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(Login.this, MainActivity.class));
-                                finish();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(Login.this, "Login failes", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }else {
-                    loginPassword.setError("Password cannot be empty");
+                if (email.equals("admin") && pass.equals("123")) {
+                    // Đăng nhập thành công với tài khoản admin
+                    Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(Login.this, AdminActivity.class));
+                    finish();
+                } else {
+                    // Kiểm tra tài khoản người dùng thông thường
+                    if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                        if (!pass.isEmpty()) {
+                            auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(Login.this, MainActivity.class));
+                                        finish();
+                                    } else {
+                                        Toast.makeText(Login.this, "Invalid email or password", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(Login.this, "Login failed", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        } else {
+                            loginPassword.setError("Password cannot be empty");
+                        }
+                    } else if (email.isEmpty()) {
+                        loginEmail.setError("Email cannot be empty");
+                    } else {
+                        loginEmail.setError("Please enter a valid email");
                     }
-                }else if(email.isEmpty()){
-                loginEmail.setError("Email cannot be empty");
-                }else {
-            loginEmail.setError("Please enter valid email");
-            }
-        }
-    });
-            signupRedirectText.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(new Intent(Login.this, SignUp.class));
                 }
-            });
-
+            }
+        });
     }
 }

@@ -35,6 +35,21 @@ public class SignUp extends AppCompatActivity {
         signupConfirm = findViewById(R.id.signup_confirmpassword);
         loginReairectText=findViewById(R.id.logninRedirectText);
 
+        String adminEmail = "admin";
+        String adminPassword = "123";
+
+        auth.createUserWithEmailAndPassword(adminEmail, adminPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(SignUp.this, "Admin account created", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(SignUp.this, "Admin account creation failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,8 +64,12 @@ public class SignUp extends AppCompatActivity {
                 } else if (confirmPass.isEmpty()) {
                     signupConfirm.setError("ConfirmPassword cannot be empty");
                 } else if (!confirmPass.equals(pass)) {
-                    signupConfirm.setError("password incorrect");
-                } else {
+                    signupConfirm.setError("password do not match");
+                } else if (pass.length() < 8) {
+                    signupPassword.setError("Password must contain at least 8 characters");
+                } else if (!pass.matches(".*[a-zA-Z].*")) {
+                        signupPassword.setError("Password must contain at least one letter");
+                    } else {
                     auth.createUserWithEmailAndPassword(user, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
