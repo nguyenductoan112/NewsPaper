@@ -62,7 +62,7 @@
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
                 android:hint="Confirm Password"
-                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawableLeft="@drawable/baseline_security_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
         <Button
