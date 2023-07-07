@@ -22,14 +22,13 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        recyclerView = (RecyclerView) findViewById(R.id.rv);
+        recyclerView = findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<NewsModel> options =
                 new FirebaseRecyclerOptions.Builder<NewsModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("NewspaperInfo"), NewsModel.class)
                         .build();
-
         mainAdapter = new NewsAdapter(options);
         recyclerView.setAdapter(mainAdapter);
     }
@@ -58,7 +57,6 @@ public class NewsActivity extends AppCompatActivity {
                 txtSearch(s);
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String s) {
                 txtSearch(s);
@@ -67,13 +65,11 @@ public class NewsActivity extends AppCompatActivity {
         });
         return super.onCreateOptionsMenu(menu);
     }
-
     private void txtSearch(String str) {
         FirebaseRecyclerOptions<NewsModel> options =
                 new FirebaseRecyclerOptions.Builder<NewsModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("NewspaperInfo").orderByChild("title").startAt(str).endAt(str + "~"), NewsModel.class)
                         .build();
-
         mainAdapter = new NewsAdapter(options);
         mainAdapter.startListening();
         recyclerView.setAdapter(mainAdapter);

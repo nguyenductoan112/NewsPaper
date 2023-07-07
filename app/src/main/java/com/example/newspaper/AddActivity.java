@@ -1,6 +1,7 @@
 package com.example.newspaper;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -29,22 +30,21 @@ public class AddActivity extends AppCompatActivity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         getSupportActionBar().hide(); // hide the title bar
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        this.getWindow().setFlags(WindowManager .LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
 
         setContentView(R.layout.activity_add);
 
-        title=(EditText)findViewById(R.id.txttitleadd);
-        author=(EditText)findViewById(R.id.txtauthoradd);
-        category=(EditText)findViewById(R.id.txtcategoryadd);
-        Pubdate=(EditText)findViewById(R.id.txtpubDateadd);
-        description=(EditText)findViewById(R.id.txtdescriptionadd);
-        content=(EditText)findViewById(R.id.txtcontentadd);
-        image_url=(EditText)findViewById(R.id.txtimage_urladd);
+        title=findViewById(R.id.txttitleadd);
+        author=findViewById(R.id.txtauthoradd);
+        category=findViewById(R.id.txtcategoryadd);
+        Pubdate=findViewById(R.id.txtpubDateadd);
+        description=findViewById(R.id.txtdescriptionadd);
+        content=findViewById(R.id.txtcontentadd);
+        image_url=findViewById(R.id.txtimage_urladd);
 
-        btnAdd=(Button)findViewById(R.id.btnAdd);
-        btnBack=(Button)findViewById(R.id.btnBack);
-
+        btnAdd=findViewById(R.id.btnAdd);
+        btnBack=findViewById(R.id.btnBack);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,7 +56,7 @@ public class AddActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                startActivity(new Intent(AddActivity.this,NewsManagerActivity.class));
             }
         });
     }

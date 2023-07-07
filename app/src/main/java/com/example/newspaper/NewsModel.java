@@ -10,7 +10,6 @@ public class NewsModel {
     private String pubDate;
     private String category;
 
-
     public NewsModel() {
     }
 
@@ -54,7 +53,6 @@ public class NewsModel {
         return content;
     }
 
-
     public String getCategory() {
         return category;
     }
@@ -62,7 +60,6 @@ public class NewsModel {
     public String getDescription() {
         return description;
     }
-
 
     public String getPubDate() {
         return pubDate;

@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+@SuppressWarnings("ALL")
 public class SignupActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
@@ -113,14 +115,24 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this, "Sign Up failed " + e.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             });
+                    clearAll();
                 } else progressDialog.cancel();
             }
         });
         goToLoginActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                clearAll();
                 startActivity(new Intent(SignupActivity.this, LoginActivity.class));
             }
         });
+    }
+
+    private void clearAll() {
+        signupFullName.setText("");
+        signupEmail.setText("");
+        signupPhoneNumber.setText("");
+        signupPassword.setText("");
+        signupConfirmPassword.setText("");
     }
 }

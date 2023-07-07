@@ -1,15 +1,10 @@
 package com.example.newspaper;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,14 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.FirebaseDatabase;
-import com.orhanobut.dialogplus.DialogPlus;
-import com.orhanobut.dialogplus.ViewHolder;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -66,10 +53,10 @@ public class NewsAdapter extends FirebaseRecyclerAdapter<NewsModel, NewsAdapter.
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
-            img=(CircleImageView)itemView.findViewById(R.id.img);
-            title=(TextView)itemView.findViewById(R.id.Titletext);
-            category=(TextView)itemView.findViewById(R.id.Categorytext);
-            Pubdate=(TextView)itemView.findViewById(R.id.Pubdatetext);
+            img=itemView.findViewById(R.id.img);
+            title=itemView.findViewById(R.id.Titletext);
+            category=itemView.findViewById(R.id.Categorytext);
+            Pubdate=itemView.findViewById(R.id.Pubdatetext);
         }
     }
 }

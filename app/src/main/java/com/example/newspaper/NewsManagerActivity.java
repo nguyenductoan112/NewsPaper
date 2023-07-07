@@ -39,8 +39,7 @@ public class NewsManagerActivity extends AppCompatActivity {
         mainAdapter= new NewsManagerAdapter(options);
         recyclerView.setAdapter(mainAdapter);
 
-
-        floatingActionButton =(FloatingActionButton)findViewById(R.id.floatingActionButton);
+        floatingActionButton = findViewById(R.id.floatingActionButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
