@@ -106,6 +106,7 @@ public class SignupActivity extends AppCompatActivity {
                                     firebaseFirestore.collection("User")
                                             .document(FirebaseAuth.getInstance().getUid())
                                             .set(new UserModel(name, phoneNumber, email));
+                                    clearAll();
                                 }
                             })
                             .addOnFailureListener(new OnFailureListener() {
@@ -115,7 +116,6 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this, "Sign Up failed " + e.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             });
-                    clearAll();
                 } else progressDialog.cancel();
             }
         });
