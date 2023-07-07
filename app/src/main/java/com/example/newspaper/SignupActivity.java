@@ -103,7 +103,7 @@ public class SignupActivity extends AppCompatActivity {
                                     progressDialog.cancel();
                                     Toast.makeText(SignupActivity.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(SignupActivity.this, LoginActivity.class));
-                                    firebaseFirestore.collection("Admin")
+                                    firebaseFirestore.collection("User")
                                             .document(FirebaseAuth.getInstance().getUid())
                                             .set(new UserModel(name, phoneNumber, email));
                                 }
