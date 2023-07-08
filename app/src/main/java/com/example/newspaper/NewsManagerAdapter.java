@@ -42,14 +42,15 @@ public class NewsManagerAdapter extends FirebaseRecyclerAdapter<NewsModel, NewsM
     @Override
     protected void onBindViewHolder(@NonNull myViewHolder holder, @SuppressLint("RecyclerView") final int position, @NonNull NewsModel model) {
         holder.title.setText(model.getTitle());
-        holder.category.setText(model.getCategory());
-        holder.Pubdate.setText(model.getPubDate());
+        holder.author.setText(model.getAuthor());
+        holder.pubDate.setText(model.getPubDate());
+
         // tải và hiện ảnh
         Glide.with(holder.img.getContext())
                 .load(model.getImage_url())
-                .placeholder(com.firebase.ui.database.R.drawable.googleg_standard_color_18)
+                .placeholder(R.drawable.no_image)
                 .circleCrop()
-                .error(com.google.firebase.firestore.ktx.R.drawable.googleg_standard_color_18)
+                .error(R.drawable.no_image)
                 .into(holder.img);
 
         //xu ly
@@ -65,15 +66,21 @@ public class NewsManagerAdapter extends FirebaseRecyclerAdapter<NewsModel, NewsM
                 View view1 = dialogPlus.getHolderView();
 
                 EditText title = view1.findViewById(R.id.txttie);
-                EditText category = view1.findViewById(R.id.txtaor);
-                EditText pubdate = view1.findViewById(R.id.txtaddr);
+                EditText author = view1.findViewById(R.id.txtauthor);
+                EditText pubDate = view1.findViewById(R.id.txtaddr);
                 EditText image_url = view1.findViewById(R.id.txtImage_url);
+                EditText category = view1.findViewById(R.id.txtcategory);
+                EditText description = view1.findViewById(R.id.txtdescription);
+                EditText content = view1.findViewById(R.id.txtcontent);
 
                 Button btnUpdate = view1.findViewById(R.id.btnUpdate);
                 title.setText(model.getTitle());
-                category.setText(model.getCategory());
-                pubdate.setText(model.getPubDate());
+                author.setText(model.getAuthor());
+                pubDate.setText(model.getPubDate());
                 image_url.setText(model.getImage_url());
+                category.setText(model.getCategory());
+                description.setText(model.getDescription());
+                content.setText(model.getContent());
 
                 dialogPlus.show();
                 btnUpdate.setOnClickListener(new View.OnClickListener() {
@@ -81,9 +88,12 @@ public class NewsManagerAdapter extends FirebaseRecyclerAdapter<NewsModel, NewsM
                     public void onClick(View view) {
                         Map<String,Object> map = new HashMap<>();
                         map.put("title",title.getText().toString());
-                        map.put("category",category.getText().toString());
-                        map.put("date",pubdate.getText().toString());
+                        map.put("author",author.getText().toString());
+                        map.put("date",pubDate.getText().toString());
                         map.put("image_url",image_url.getText().toString());
+                        map.put("category",category.getText().toString());
+                        map.put("description",description.getText().toString());
+                        map.put("content",content.getText().toString());
                         FirebaseDatabase.getInstance().getReference().child("NewspaperInfo")
                                 .child(getRef(position).getKey()).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -91,7 +101,6 @@ public class NewsManagerAdapter extends FirebaseRecyclerAdapter<NewsModel, NewsM
                                     public void onSuccess(Void unused) {
                                         Toast.makeText(holder.title.getContext(), "Data Update Successfully", Toast.LENGTH_SHORT).show();
                                         dialogPlus.dismiss();
-
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
@@ -101,11 +110,8 @@ public class NewsManagerAdapter extends FirebaseRecyclerAdapter<NewsModel, NewsM
                                         dialogPlus.dismiss();
                                     }
                                 });
-
                     }
                 });
-
-
             }
         });
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
@@ -141,20 +147,19 @@ public class NewsManagerAdapter extends FirebaseRecyclerAdapter<NewsModel, NewsM
 
     class myViewHolder extends RecyclerView.ViewHolder{
         CircleImageView img;
-        TextView title,category,Pubdate,author,description, content,image_url;
+        TextView title,category,pubDate,author,description, content,imageUrl;
         Button btnEdit,btnDelete;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
-            img=(CircleImageView)itemView.findViewById(R.id.img);
-            title=(TextView)itemView.findViewById(R.id.Titletext);
-            category=(TextView)itemView.findViewById(R.id.Categorytext);
-            Pubdate=(TextView)itemView.findViewById(R.id.Pubdatetext);
+            img=itemView.findViewById(R.id.img);
+            title=itemView.findViewById(R.id.titleText);
+            author=itemView.findViewById(R.id.authorText);
+            pubDate=itemView.findViewById(R.id.pubDateText);
 
             //xu ly button edit and delete
-            btnEdit = (Button) itemView.findViewById(R.id.btnEdit);
-            btnDelete =(Button) itemView.findViewById((R.id.btnDelete));
-
+            btnEdit =  itemView.findViewById(R.id.btnEdit);
+            btnDelete = itemView.findViewById((R.id.btnDelete));
         }
     }
 }

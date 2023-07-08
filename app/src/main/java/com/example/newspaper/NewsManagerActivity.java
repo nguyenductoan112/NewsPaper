@@ -35,7 +35,6 @@ public class NewsManagerActivity extends AppCompatActivity {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("NewspaperInfo"), NewsModel.class)
                         .build();
 
-
         mainAdapter= new NewsManagerAdapter(options);
         recyclerView.setAdapter(mainAdapter);
 
@@ -46,8 +45,6 @@ public class NewsManagerActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),AddActivity.class));
             }
         });
-
-
     }
     @Override
     protected void onStart(){

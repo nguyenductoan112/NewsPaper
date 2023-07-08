@@ -11,7 +11,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp">
 
@@ -24,13 +27,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/custom_edittext"
+                android:gravity="center"
                 android:orientation="vertical"
-                android:padding="30dp">
+                android:padding="20dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="15dp"
                     android:text="Update Details"
                     android:textAlignment="center"
                     android:textColor="@color/Lavender"
@@ -43,21 +47,33 @@
                     android:gravity="center"
                     android:text="Title"
                     android:textSize="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteY="50dp" />
+                    tools:ignore="MissingConstraints" />
 
                 <EditText
                     android:id="@+id/txttie"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:background="@drawable/rounder"
+                    android:textColor="@color/black"
+                    tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="Author"
+                    android:textSize="20dp"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/txtauthor"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
                     android:background="@drawable/rounder"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
-                    tools:layout_editor_absoluteX="19dp"
-                    tools:layout_editor_absoluteY="89dp" />
+                    tools:ignore="DuplicateIds,MissingConstraints,SpeakableTextPresentCheck" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -65,22 +81,16 @@
                     android:gravity="center"
                     android:text="Category"
                     android:textSize="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteY="124dp" />
+                    tools:ignore="MissingConstraints" />
 
                 <EditText
-                    android:id="@+id/txtaor"
+                    android:id="@+id/txtcategory"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@drawable/rounder"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    tools:ignore="DuplicateIds,MissingConstraints,SpeakableTextPresentCheck"
-                    tools:layout_editor_absoluteX="2dp"
-                    tools:layout_editor_absoluteY="171dp" />
+                    tools:ignore="DuplicateIds,MissingConstraints,SpeakableTextPresentCheck" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -88,10 +98,7 @@
                     android:gravity="center"
                     android:text="Date"
                     android:textSize="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteY="219dp" />
+                    tools:ignore="MissingConstraints" />
 
                 <EditText
                     android:id="@+id/txtaddr"
@@ -100,9 +107,7 @@
                     android:background="@drawable/rounder"
                     android:gravity="center"
                     android:textColor="@color/black"
-                    tools:ignore="DuplicateIds,MissingConstraints,SpeakableTextPresentCheck"
-                    tools:layout_editor_absoluteX="2dp"
-                    tools:layout_editor_absoluteY="268dp" />
+                    tools:ignore="DuplicateIds,MissingConstraints,SpeakableTextPresentCheck" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -110,15 +115,49 @@
                     android:gravity="center"
                     android:text="Image Url"
                     android:textSize="20dp"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/txtImage_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/rounder"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    tools:ignore="DuplicateIds,MissingConstraints,SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="Description"
+                    android:textSize="20dp"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/txtdescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/rounder"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    tools:ignore="DuplicateIds,MissingConstraints,SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:text="Content"
+                    android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="MissingConstraints"
                     tools:layout_editor_absoluteY="219dp" />
 
                 <EditText
-                    android:id="@+id/txtImage_url"
+                    android:id="@+id/txtcontent"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/rounder"
                     android:gravity="center"
                     android:textColor="@color/black"
@@ -130,7 +169,7 @@
                     android:id="@+id/btnUpdate"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="15dp"
                     android:backgroundTint="@color/Lavender"
                     android:text="Update"
                     android:textSize="18sp"

@@ -1,6 +1,7 @@
 package com.example.newspaper;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class NewsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
-    NewsAdapter mainAdapter;
+    NewsAdapter newsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,20 +30,38 @@ public class NewsActivity extends AppCompatActivity {
                 new FirebaseRecyclerOptions.Builder<NewsModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("NewspaperInfo"), NewsModel.class)
                         .build();
-        mainAdapter = new NewsAdapter(options);
-        recyclerView.setAdapter(mainAdapter);
+        newsAdapter = new NewsAdapter(options);
+        recyclerView.setAdapter(newsAdapter);
+
+        newsAdapter.setOnItemClickListener(new NewsAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(NewsModel model) {
+                // Chuyển sang trang mới để đọc bài báo
+                Intent intent = new Intent(NewsActivity.this, DetailsNewsActivity.class);
+                intent.putExtra("title", model.getTitle());
+                intent.putExtra("pubDate", model.getPubDate());
+                intent.putExtra("imageUrl", model.getImage_url());
+                intent.putExtra("author", model.getAuthor());
+                intent.putExtra("description", model.getDescription());
+                intent.putExtra("content", model.getContent());
+                startActivity(intent);
+            }
+        });
     }
+
+
+
 
     @Override
     protected void onStart() {
         super.onStart();
-        mainAdapter.startListening();
+        newsAdapter.startListening();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mainAdapter.stopListening();
+        newsAdapter.stopListening();
     }
 
     @SuppressLint("ResourceType")
@@ -70,8 +89,8 @@ public class NewsActivity extends AppCompatActivity {
                 new FirebaseRecyclerOptions.Builder<NewsModel>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("NewspaperInfo").orderByChild("title").startAt(str).endAt(str + "~"), NewsModel.class)
                         .build();
-        mainAdapter = new NewsAdapter(options);
-        mainAdapter.startListening();
-        recyclerView.setAdapter(mainAdapter);
+        newsAdapter = new NewsAdapter(options);
+        newsAdapter.startListening();
+        recyclerView.setAdapter(newsAdapter);
     }
 }

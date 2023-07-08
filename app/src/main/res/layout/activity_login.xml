@@ -55,7 +55,7 @@
                 android:drawablePadding="8dp"
                 android:hint="Password"
                 android:padding="8dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"/>
 
             <Button
                 android:id="@+id/login_button"
@@ -65,7 +65,8 @@
                 android:backgroundTint="@color/Lavender"
                 android:text="Login"
                 android:textSize="18sp"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="20dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/login_resetPassword"

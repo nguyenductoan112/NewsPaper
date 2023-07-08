@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="6dp"
@@ -27,7 +28,7 @@
             app:civ_border_width="2dp" />
 
         <TextView
-            android:id="@+id/Titletext"
+            android:id="@+id/titleText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -39,23 +40,23 @@
             tools:ignore="DuplicateIds" />
 
         <TextView
-            android:id="@+id/Categorytext"
+            android:id="@+id/authorText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Titletext"
+            android:layout_below="@+id/titleText"
             android:layout_marginStart="20dp"
             android:layout_marginTop="3dp"
             android:layout_toEndOf="@+id/img"
-            android:text="Category"
+            android:text="Author"
             android:textColor="#000"
             android:textSize="14sp"
             android:textStyle="italic" />
 
         <TextView
-            android:id="@+id/Pubdatetext"
+            android:id="@+id/pubDateText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Categorytext"
+            android:layout_below="@+id/authorText"
             android:layout_marginStart="20dp"
             android:layout_marginTop="3dp"
             android:layout_toEndOf="@+id/img"

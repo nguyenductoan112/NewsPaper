@@ -65,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                                         progressDialog.cancel();
                                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(LoginActivity.this, AdminActivity.class));
+                                        clearAll();
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
@@ -82,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                                         progressDialog.cancel();
                                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(LoginActivity.this, NewsActivity.class));
+                                        clearAll();
                                     }
                                 })
                                 .addOnFailureListener(new OnFailureListener() {
@@ -92,7 +94,6 @@ public class LoginActivity extends AppCompatActivity {
                                     }
                                 });
                     }
-                    clearAll();
                 } else progressDialog.cancel();
             }
         });

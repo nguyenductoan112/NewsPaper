@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddActivity extends AppCompatActivity {
-    EditText title,author,category,Pubdate, description, content,image_url;
+    EditText title,author,category,pubDate, description, content,image_url;
     Button btnAdd, btnBack;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -38,7 +38,7 @@ public class AddActivity extends AppCompatActivity {
         title=findViewById(R.id.txttitleadd);
         author=findViewById(R.id.txtauthoradd);
         category=findViewById(R.id.txtcategoryadd);
-        Pubdate=findViewById(R.id.txtpubDateadd);
+        pubDate=findViewById(R.id.txtpubDateadd);
         description=findViewById(R.id.txtdescriptionadd);
         content=findViewById(R.id.txtcontentadd);
         image_url=findViewById(R.id.txtimage_urladd);
@@ -66,7 +66,7 @@ public class AddActivity extends AppCompatActivity {
         map.put("author",author.getText().toString());
         map.put("category",category.getText().toString());
         map.put("content",content.getText().toString());
-        map.put("date",Pubdate.getText().toString());
+        map.put("pubDate",pubDate.getText().toString());
         map.put("description",description.getText().toString());
         map.put("image_url",image_url.getText().toString());
 
@@ -89,7 +89,7 @@ public class AddActivity extends AppCompatActivity {
         title.setText("");
         author.setText("");
         category.setText("");
-        Pubdate.setText("");
+        pubDate.setText("");
         description.setText("");
         content.setText("");
         image_url.setText("");
