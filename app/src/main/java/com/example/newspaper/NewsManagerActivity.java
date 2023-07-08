@@ -61,7 +61,6 @@ public class NewsManagerActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.search,menu);
         MenuItem item = menu.findItem(R.id.search);
         SearchView searchView = (SearchView)item.getActionView();
-        //doc lai ham nay
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {

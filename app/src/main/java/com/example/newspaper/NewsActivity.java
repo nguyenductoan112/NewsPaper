@@ -49,9 +49,6 @@ public class NewsActivity extends AppCompatActivity {
         });
     }
 
-
-
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -92,5 +89,20 @@ public class NewsActivity extends AppCompatActivity {
         newsAdapter = new NewsAdapter(options);
         newsAdapter.startListening();
         recyclerView.setAdapter(newsAdapter);
+
+        newsAdapter.setOnItemClickListener(new NewsAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(NewsModel model) {
+                // Chuyển sang trang mới để đọc bài báo
+                Intent intent = new Intent(NewsActivity.this, DetailsNewsActivity.class);
+                intent.putExtra("title", model.getTitle());
+                intent.putExtra("pubDate", model.getPubDate());
+                intent.putExtra("imageUrl", model.getImage_url());
+                intent.putExtra("author", model.getAuthor());
+                intent.putExtra("description", model.getDescription());
+                intent.putExtra("content", model.getContent());
+                startActivity(intent);
+            }
+        });
     }
 }
