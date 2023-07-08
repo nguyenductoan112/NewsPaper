@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.SearchView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +13,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class NewsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     NewsAdapter newsAdapter;
+    FloatingActionButton btnSetting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,7 @@ public class NewsActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        btnSetting = findViewById(R.id.btnSetting);
 
         FirebaseRecyclerOptions<NewsModel> options =
                 new FirebaseRecyclerOptions.Builder<NewsModel>()
@@ -45,6 +49,13 @@ public class NewsActivity extends AppCompatActivity {
                 intent.putExtra("description", model.getDescription());
                 intent.putExtra("content", model.getContent());
                 startActivity(intent);
+            }
+        });
+
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NewsActivity.this,SettingActivity.class));
             }
         });
     }
