@@ -1,6 +1,5 @@
 package com.example.newspaper;
 
-
 public class NewsModel {
     private String title;
     private String author;

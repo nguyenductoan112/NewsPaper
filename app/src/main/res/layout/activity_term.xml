@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nenbao"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".TermActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/custom_edittext"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+
+            <TextView
+                android:id="@+id/term"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ĐIỀU KHOẢN SỬ DỤNG"
+                android:textAlignment="center"
+                android:textColor="@color/Lavender"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/multiAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Thỏa thuận sử dụng và bảo mật này (sau đây gọi là “Thỏa thuận”) được lập ra bởi và giữa bạn (“bạn”) và chúng tôi về việc sử dụng bất kỳ hay tất cả các loại dịch vụ (“Dịch vụ”) của app. \n  Bằng việc sử dụng Dịch vụ, bạn đồng ý chịu ràng buộc bởi những điều khoản và điều kiện này. Dịch vụ được thiết kế để giúp bạn tiếp cận thông tin tin tức được liên kết từ các trang không thuộc quyền sở hữu hoặc quản lý. \n  Cụ thể, Dịch vụ cung cấp những mô tả ngắn gọn về các bài báo để giúp bạn xác định nội dung chính của bài báo mà bạn quan tâm. Khi bạn lựa chọn một bài báo, bạn sẽ được kết nối tới website chứa bài báo đó (sau đây gọi là “website được kết nối”). \n  Thuật ngữ “bạn” để chỉ tất cả các cá nhân và/hoặc các tổ chức truy cập vào app vì bất kỳ lý do nào.\n\nThỏa thuận sử dụng\n\n1. Quyền gắn với Dịch vụ. Chúng tôi sở hữu và duy trì mọi quyền lợi sở hữu trí tuệ đối với Dịch vụ của mình nhưng không tuyên bố là mình có quyền sở hữu trí tuệ đối với các bài báo tại các website được kết nối. Các quyền sở hữu trí tuệ này thuộc về các website được kết nối. Chúng tôi cũng không chịu trách nhiệm về các thông tin, dịch vụ và nội dung của những website được kết nối. Bạn là người chịu hoàn toàn trách nhiệm trong việc sử dụng, khai thác, cung cấp thông tin cá nhân, v.v... cho các website này.\n\n2. Sử dụng và chấm dứt sử dụng Dịch vụ. Bạn chỉ có thể sử dụng nội dung của Dịch vụ cho mục đích cá nhân của riêng bạn (cụ thể là không dùng cho mục đích thương mại) và không được sao chép, thay đổi, sửa đổi, tạo ra các tác phẩm phái sinh hoặc thể hiện một cách công khai bất kỳ nội dung nào của Dịch vụ. Chẳng hạn, bạn không được sử dụng Dịch vụ để bán một sản phẩm hay dịch vụ; hay sử dụng Dịch vụ để tăng số lượt truy cập tới trang web của bạn vì mục đích thương mại; hay sử dụng các kết quả từ Dịch vụ rồi định dạng lại và thể hiện công khai chúng, hay sử dụng các công cụ hoặc tài liệu khác để theo dõi hay sao chép bất kỳ nội dung nào từ Dịch vụ. Nếu bạn không chắc liệu dự định sử dụng Dịch vụ của bạn có được phép hay không, xin vui lòng liên hệ với chúng tôi. Chúng tôi sẽ không chịu trách nhiệm đối với việc gián đoạn, ngừng hoạt động, mất hoặc sai lệch dữ liệu từ những hành động tấn công của cá nhân hay tổ chức nào khác, cũng như về các sự cố kỹ thuật trong khi cung cấp Dịch vụ, cũng không chịu trách nhiệm về các tổn thất phát sinh từ việc sử dụng Dịch vụ hoặc từ sự tương tác giữa bạn với những người dùng khác. Chúng tôi có quyền đơn phương đình chỉ hoặc chấm dứt Dịch vụ hoặc sự truy cập của bạn tới Dịch vụ." />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

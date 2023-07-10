@@ -16,8 +16,15 @@
         android:theme="@style/Theme.NewsPaper"
         tools:targetApi="31">
         <activity
+            android:name=".AdminSetUp"
+            android:exported="false">
+
+        </activity>
+        <activity
             android:name=".AdminActivity"
-            android:exported="false" />
+            android:exported="false">
+
+        </activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -48,7 +55,6 @@
         <activity
             android:name=".NewsActivity"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -63,14 +69,44 @@
         <activity
             android:name=".NewsManagerActivity"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
         </activity>
         <activity
             android:name=".DetailsNewsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TermActivity"
+            android:exported="false" >
+
+        </activity>
+        <activity
+            android:name=".ContactActivity"
+            android:exported="false" >
+
+        </activity>
+        <activity
+            android:name=".UserActivity"
+            android:exported="false">
+
+
+        </activity>
+
+        <activity
+            android:name=".UpdateUserActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <activity
+            android:name=".ThemeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

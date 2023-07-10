@@ -7,7 +7,7 @@
     android:background="@drawable/nenbao"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".AdminActivity">
+    tools:context=".ThemeActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -22,48 +22,50 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/custom_edittext"
             android:orientation="vertical"
-            android:padding="30dp">
+            android:padding="40dp">
 
             <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Admin Page"
+                android:text="GIAO DIỆN"
                 android:textAlignment="center"
                 android:textColor="@color/Lavender"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Light mode"
+                android:textColor="?attr/tC"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/light"
+                android:text="Nhấn để tùy chỉnh giao diện phù hợp với bạn."
+                android:textColor="?attr/tC"
+                android:textSize="15sp" />
+
+            <Switch
+                android:id="@+id/mode1"
+                android:layout_width="match_parent"
+                android:layout_height="50sp" />
+
             <Button
-                android:id="@+id/admin_newsManager"
+                android:id="@+id/btnbackadmin"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/Lavender"
-                android:text="Manage News"
+                android:text="Trang Chủ"
                 android:textSize="18sp"
-                app:cornerRadius="20dp" />
-
-            <Button
-                android:id="@+id/admin_userManager"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="@color/Lavender"
-                android:text="Manage User"
-                android:textSize="18sp"
-                app:cornerRadius="20dp" />
-
-            <Button
-                android:id="@+id/ThemeManager"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="@color/Lavender"
-                android:text="Manage Theme"
-                android:textSize="18sp"
-                app:cornerRadius="20dp" />
-
+                app:cornerRadius="20dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
 </LinearLayout>

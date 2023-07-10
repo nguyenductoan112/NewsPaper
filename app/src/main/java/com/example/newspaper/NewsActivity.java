@@ -17,9 +17,17 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class NewsActivity extends AppCompatActivity {
+
+    private void reset(){
+        Intent intent = new Intent(getApplicationContext(), NewsActivity.class);
+        startActivity(intent);
+        finish();
+    }
     RecyclerView recyclerView;
     NewsAdapter newsAdapter;
+
     FloatingActionButton btnSetting;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +36,7 @@ public class NewsActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        btnSetting = findViewById(R.id.btnSetting);
+
 
         FirebaseRecyclerOptions<NewsModel> options =
                 new FirebaseRecyclerOptions.Builder<NewsModel>()
@@ -52,10 +60,12 @@ public class NewsActivity extends AppCompatActivity {
             }
         });
 
+        btnSetting = findViewById(R.id.btnSetting);
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NewsActivity.this,SettingActivity.class));
+                Intent intenti = new Intent(NewsActivity.this, SettingActivity.class);
+                startActivity(intenti);
             }
         });
     }

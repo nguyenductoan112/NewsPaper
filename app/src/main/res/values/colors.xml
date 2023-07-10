@@ -8,4 +8,18 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Lavender">#8692f7</color>
+
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar" >
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="bgc">#ffffff</item>
+        <item name="tC">#000000</item>
+    </style>
+
+    <style name="DarkTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar" >
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="bgc">#000000</item>
+        <item name="tC">#ffffff</item>
+    </style>
+
+    <color name="colorPrimary">#00BCD4</color>
 </resources>
