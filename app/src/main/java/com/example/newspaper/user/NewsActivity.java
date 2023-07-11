@@ -30,7 +30,6 @@ public class NewsActivity extends AppCompatActivity {
 
     FloatingActionButton btnSetting;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,8 +65,7 @@ public class NewsActivity extends AppCompatActivity {
         btnSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intenti = new Intent(NewsActivity.this, SettingActivity.class);
-                startActivity(intenti);
+                startActivity(new Intent(NewsActivity.this, SettingActivity.class));
             }
         });
     }

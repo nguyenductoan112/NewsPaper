@@ -46,7 +46,7 @@
                     android:layout_height="30dp"
                     android:gravity="center"
                     android:text="Tiêu đề"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -63,7 +63,7 @@
                     android:layout_height="30dp"
                     android:gravity="center"
                     android:text="Tác giả"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -97,7 +97,7 @@
                     android:layout_height="30dp"
                     android:gravity="center"
                     android:text="Ngày đăng"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -114,7 +114,7 @@
                     android:layout_height="30dp"
                     android:gravity="center"
                     android:text="Link ảnh"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -131,7 +131,7 @@
                     android:layout_height="30dp"
                     android:gravity="center"
                     android:text="Mô tả"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     tools:ignore="MissingConstraints" />
 
                 <EditText
@@ -148,7 +148,7 @@
                     android:layout_height="30dp"
                     android:gravity="center"
                     android:text="Nội dung"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="MissingConstraints"
