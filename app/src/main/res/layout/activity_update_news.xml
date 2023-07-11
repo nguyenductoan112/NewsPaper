@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
-                    android:text="Update Details"
+                    android:text="Chỉnh sửa báo"
                     android:textAlignment="center"
                     android:textColor="@color/Lavender"
                     android:textSize="36sp"
@@ -45,7 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:gravity="center"
-                    android:text="Title"
+                    android:text="Tiêu đề"
                     android:textSize="20dp"
                     tools:ignore="MissingConstraints" />
 
@@ -62,7 +62,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:gravity="center"
-                    android:text="Author"
+                    android:text="Tác giả"
                     android:textSize="20dp"
                     tools:ignore="MissingConstraints" />
 
@@ -79,7 +79,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:gravity="center"
-                    android:text="Category"
+                    android:text="Danh mục"
                     android:textSize="20dp"
                     tools:ignore="MissingConstraints" />
 
@@ -96,7 +96,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:gravity="center"
-                    android:text="Date"
+                    android:text="Ngày đăng"
                     android:textSize="20dp"
                     tools:ignore="MissingConstraints" />
 
@@ -113,7 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:gravity="center"
-                    android:text="Image Url"
+                    android:text="Link ảnh"
                     android:textSize="20dp"
                     tools:ignore="MissingConstraints" />
 
@@ -130,7 +130,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:gravity="center"
-                    android:text="Description"
+                    android:text="Mô tả"
                     android:textSize="20dp"
                     tools:ignore="MissingConstraints" />
 
@@ -147,7 +147,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:gravity="center"
-                    android:text="Content"
+                    android:text="Nội dung"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -171,7 +171,7 @@
                     android:layout_height="60dp"
                     android:layout_marginTop="15dp"
                     android:backgroundTint="@color/Lavender"
-                    android:text="Update"
+                    android:text="Cập nhật"
                     android:textSize="18sp"
                     app:cornerRadius="20dp" />
 

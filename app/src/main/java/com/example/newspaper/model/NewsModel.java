@@ -1,4 +1,4 @@
-package com.example.newspaper;
+package com.example.newspaper.model;
 
 public class NewsModel {
     private String title;

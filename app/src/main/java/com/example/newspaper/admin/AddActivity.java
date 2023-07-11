@@ -1,4 +1,4 @@
-package com.example.newspaper;
+package com.example.newspaper.admin;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.newspaper.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.FirebaseDatabase;
@@ -33,7 +34,7 @@ public class AddActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager .LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
 
-        setContentView(R.layout.activity_add);
+        setContentView(R.layout.activity_add_news);
 
         title=findViewById(R.id.txttitleadd);
         author=findViewById(R.id.txtauthoradd);

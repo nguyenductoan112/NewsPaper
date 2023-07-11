@@ -1,4 +1,4 @@
-package com.example.newspaper;
+package com.example.newspaper.admin;
 
 
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+
+import com.example.newspaper.R;
 
 
 public class AdminSetUp extends AppCompatActivity {

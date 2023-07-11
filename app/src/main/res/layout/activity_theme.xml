@@ -7,7 +7,7 @@
     android:background="@drawable/nenbao"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ThemeActivity">
+    tools:context=".user.ThemeActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

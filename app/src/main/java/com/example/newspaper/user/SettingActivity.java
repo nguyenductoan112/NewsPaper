@@ -1,4 +1,4 @@
-package com.example.newspaper;
+package com.example.newspaper.user;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.newspaper.R;
 
 public class SettingActivity extends AppCompatActivity {
 

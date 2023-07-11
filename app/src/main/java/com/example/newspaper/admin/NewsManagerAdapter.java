@@ -1,4 +1,4 @@
-package com.example.newspaper;
+package com.example.newspaper.admin;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.newspaper.model.NewsModel;
+import com.example.newspaper.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -58,7 +60,7 @@ public class NewsManagerAdapter extends FirebaseRecyclerAdapter<NewsModel, NewsM
             @Override
             public void onClick(View view) {
                 final DialogPlus dialogPlus =DialogPlus.newDialog(holder.img.getContext())
-                        .setContentHolder(new ViewHolder(R.layout.update_popup))
+                        .setContentHolder(new ViewHolder(R.layout.activity_update_news))
                         .setExpanded(true,ViewGroup.LayoutParams.WRAP_CONTENT)
                         .create();
 

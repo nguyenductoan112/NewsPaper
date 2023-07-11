@@ -1,4 +1,4 @@
-package com.example.newspaper;
+package com.example.newspaper.user;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.newspaper.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class DetailsNewsActivity extends AppCompatActivity {

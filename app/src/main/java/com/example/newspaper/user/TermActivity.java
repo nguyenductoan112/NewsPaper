@@ -1,8 +1,10 @@
-package com.example.newspaper;
+package com.example.newspaper.user;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.newspaper.R;
 
 public class TermActivity extends AppCompatActivity {
 

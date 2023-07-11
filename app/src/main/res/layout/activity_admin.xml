@@ -7,7 +7,7 @@
     android:background="@drawable/nenbao"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".AdminActivity">
+    tools:context=".admin.AdminActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Admin Page"
+                android:text="Admin"
                 android:textAlignment="center"
                 android:textColor="@color/Lavender"
                 android:textSize="36sp"
@@ -39,8 +39,8 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/Lavender"
-                android:text="Manage News"
-                android:textSize="18sp"
+                android:text="Quản lý báo"
+                android:textSize="16sp"
                 app:cornerRadius="20dp" />
 
             <Button
@@ -49,8 +49,8 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/Lavender"
-                android:text="Manage User"
-                android:textSize="18sp"
+                android:text="Quản lý người dùng"
+                android:textSize="16sp"
                 app:cornerRadius="20dp" />
 
             <Button
@@ -59,8 +59,8 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/Lavender"
-                android:text="Manage Theme"
-                android:textSize="18sp"
+                android:text="Quản lý giao diện"
+                android:textSize="16sp"
                 app:cornerRadius="20dp" />
 
         </LinearLayout>

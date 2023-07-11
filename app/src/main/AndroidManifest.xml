@@ -16,12 +16,12 @@
         android:theme="@style/Theme.NewsPaper"
         tools:targetApi="31">
         <activity
-            android:name=".AdminSetUp"
+            android:name=".admin.AdminSetUp"
             android:exported="false">
 
         </activity>
         <activity
-            android:name=".AdminActivity"
+            android:name=".admin.AdminActivity"
             android:exported="false">
 
         </activity>
@@ -53,67 +53,74 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".NewsActivity"
+            android:name=".user.NewsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AddActivity"
+            android:name=".admin.AddActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".NewsManagerActivity"
+            android:name=".admin.NewsManagerActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DetailsNewsActivity"
+            android:name=".user.DetailsNewsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".TermActivity"
+            android:name=".user.TermActivity"
             android:exported="false" >
 
         </activity>
         <activity
-            android:name=".ContactActivity"
+            android:name=".user.ContactActivity"
             android:exported="false" >
 
         </activity>
         <activity
-            android:name=".UserActivity"
+            android:name=".user.UserActivity"
             android:exported="false">
 
 
         </activity>
 
         <activity
-            android:name=".UpdateUserActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-
-        <activity
-            android:name=".ThemeActivity"
+            android:name=".user.UpdateUserActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
-            android:name=".SettingActivity"
+            android:name=".user.ThemeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".user.SettingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".admin.UserManagerActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -1,4 +1,4 @@
-package com.example.newspaper;
+package com.example.newspaper.admin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.newspaper.R;
 
 public class AdminActivity extends AppCompatActivity {
     private void reset(){
@@ -28,6 +30,13 @@ public class AdminActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(AdminActivity.this, NewsManagerActivity.class));
+            }
+        });
+
+        userManager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AdminActivity.this, UserManagerActivity.class));
             }
         });
 

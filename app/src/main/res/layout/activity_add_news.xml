@@ -7,7 +7,7 @@
     android:background="@drawable/nenbao"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".AddActivity">
+    tools:context=".admin.AddActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:text="Add Newspaper"
+                    android:text="Thêm báo"
                     android:textAlignment="center"
                     android:textColor="@color/Lavender"
                     android:textSize="36sp"
@@ -42,7 +42,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_person_24"
                     android:drawablePadding="8dp"
-                    android:hint="Title"
+                    android:hint="Tiêu đề"
                     android:padding="8dp"
                     android:textColor="@color/black"
                     tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
@@ -55,7 +55,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_person_24"
                     android:drawablePadding="8dp"
-                    android:hint="Author"
+                    android:hint="Tác giả"
                     android:padding="8dp"
                     android:textColor="@color/black"
                     tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
@@ -68,7 +68,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_person_24"
                     android:drawablePadding="8dp"
-                    android:hint="Description"
+                    android:hint="Mô tả"
                     android:padding="8dp"
                     android:textColor="@color/black"
                     tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
@@ -81,7 +81,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_person_24"
                     android:drawablePadding="8dp"
-                    android:hint="Content"
+                    android:hint="Nội dung"
                     android:padding="8dp"
                     android:textColor="@color/black"
                     tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
@@ -94,7 +94,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_person_24"
                     android:drawablePadding="8dp"
-                    android:hint="Image Url"
+                    android:hint="Link ảnh"
                     android:padding="8dp"
                     android:textColor="@color/black"
                     tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
@@ -107,7 +107,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_person_24"
                     android:drawablePadding="8dp"
-                    android:hint="Pub Date"
+                    android:hint="Ngày đăng"
                     android:padding="8dp"
                     android:textColor="@color/black"
                     tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
@@ -120,7 +120,7 @@
                     android:background="@drawable/custom_edittext"
                     android:drawableLeft="@drawable/baseline_person_24"
                     android:drawablePadding="8dp"
-                    android:hint="Category"
+                    android:hint="Danh mục"
                     android:padding="8dp"
                     android:textColor="@color/black"
                     tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
@@ -131,7 +131,7 @@
                     android:layout_height="60dp"
                     android:layout_marginTop="20dp"
                     android:backgroundTint="@color/Lavender"
-                    android:text="Save"
+                    android:text="Lưu"
                     android:textSize="18sp"
                     app:cornerRadius="20dp" />
 
@@ -140,7 +140,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:backgroundTint="@color/Lavender"
-                    android:text="Back"
+                    android:text="Trở về"
                     android:textSize="18sp"
                     app:cornerRadius="20dp" />
             </LinearLayout>
